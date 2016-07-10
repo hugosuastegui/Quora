@@ -1,0 +1,85 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px;
+}
+th {
+  text-align: left;
+}
+
+#quora_logo {
+  width: 100%;
+  height: 50%;
+  margin: 1em;
+}
+
+#login_credentials{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+form {
+  margin: auto;
+}
+
+input {
+  margin: 2px auto;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+/*Página Secret*/
+
+nav {
+  margin: 0 auto;
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  line-height: 0;
+}
+
+#barra {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #990000;
+}
+  
+ul {
+  display: inline;
+}
+
+li {
+  list-style: none;
+  padding: 1em;
+  padding-top: 25px;
+  float: right;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+#question_content {
+  border: 1px solid black;
+  width: 80%;
+  margin-top: 3em;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2em;
+  padding: 4px;
+}
+
+#create_question {
+  margin-top: 5em;
+  text-align: center;
+  border: 1px solid black;
+  padding: 4px;
+}
+
+textarea {
+  resize: none;
+}
