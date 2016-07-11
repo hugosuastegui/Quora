@@ -1,4 +1,4 @@
-before '/users/:id' do
+before '/questions' do
   unless session[:id]
     redirect to "/"
   end
@@ -8,7 +8,7 @@ get '/' do
     erb :index
 end
 
-get '/users/:id' do
+get '/questions' do
   # u = User.find(params[:id])
   @all_questions = Question.all
   erb :secret
@@ -23,7 +23,7 @@ post '/register' do
   if u.save 
     @bulean = true
     session[:id] = u.id
-    redirect to ("/users/#{u.id}")
+    redirect to ("/questions")
   end
 end
 
@@ -35,7 +35,7 @@ post '/login' do
   user = User.authenticate(email, password)
   if user 
       session[:id] = user.id
-      redirect to ("/users/#{user.id}")
+      redirect to ("/questionsser.id}")
   else
 #obtener id y email para crear sesión
   @error_message = "Usuario Inválido"
