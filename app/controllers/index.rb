@@ -35,7 +35,7 @@ post '/login' do
   user = User.authenticate(email, password)
   if user 
       session[:id] = user.id
-      redirect to ("/questionsser.id}")
+      redirect to ("/questions")
   else
 #obtener id y email para crear sesión
   @error_message = "Usuario Inválido"
