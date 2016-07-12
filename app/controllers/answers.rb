@@ -12,9 +12,16 @@ post '/answer' do
 end
 
 get '/upvote/:q_id' do
-  question_id = params[:q_id] 
-  question =  Question.find(question_id)
-  votes = question.votes + 1
-  question.update(votes: votes)
-  question.votes
+  puts "*" * 50
+  p "inside upvote/:q_id"
+  p request.xhr?
+
+  p question_id = params[:q_id]
+  p question_id.class
+  p question =  Question.find(question_id)
+  p votes = question.votes + 1
+  p question.update(votes: votes)
+  puts "*" * 50
+  total_votes = question.votes
+  total_votes.to_s
 end
