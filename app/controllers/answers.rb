@@ -13,9 +13,8 @@ end
 
 get '/upvote/:q_id' do
   question_id = params[:q_id] 
-  p question_id
   question =  Question.find(question_id)
   votes = question.votes + 1
   question.update(votes: votes)
-  redirect to ('/questions')
+  question.votes
 end
